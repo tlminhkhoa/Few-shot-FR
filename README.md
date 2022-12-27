@@ -1,7 +1,7 @@
 
 
 
-<h1 align="center">Few Shot Facial Recognition</h>
+# Few Shot Facial Recognition 
 
 <p align="center">
     <img  src="https://i.imgur.com/mcHtn5R.png">
