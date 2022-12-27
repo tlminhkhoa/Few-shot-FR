@@ -1,10 +1,11 @@
 
 
 
-# Few Shot Facial Recognition
+<h1 align="center">Few Shot Facial Recognition</h>
 
-![](https://i.imgur.com/mcHtn5R.png)
-
+<p align="center">
+    <img  src="https://i.imgur.com/mcHtn5R.png">
+</p>
     
 ![downloads](https://img.shields.io/github/downloads/atom/atom/total.svg)
 ![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
