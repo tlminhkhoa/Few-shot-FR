@@ -13,7 +13,26 @@
 
 <!-- ## Table of Contents -->
 
-<!-- [TOC] -->
+- [Few Shot Facial Recognition](#few-shot-facial-recognition-----https---iimgurcom-jrysvv4png-)
+  * [What is this ?](#what-is-this--)
+  * [Dataset](#dataset)
+  * [Image Augmentation](#image-augmentation)
+  * [Multi-Task Cascaded Convolutional Networks (MTCNN)](#multi-task-cascaded-convolutional-networks--mtcnn-)
+  * [FaceNet](#facenet)
+  * [RESULTS](#results)
+  * [Exploratory Data Analysis](#exploratory-data-analysis)
+  * [Brute Force Euclidean Distance](#brute-force-euclidean-distance)
+  * [K-D Tree With Euclidean Distance](#k-d-tree-with-euclidean-distance)
+  * [Stacked SVM](#stacked-svm)
+          + [tags: `Templates` `Documentation`](#tags---templates---documentation-)
+  * [`prepData.js`](#-prepdatajs-)
+  * [`few_shot_face_recogntion.py`](#-few-shot-face-recogntionpy-)
+  * [`svm_fewshot.py`](#-svm-fewshotpy-)
+  * [`analysis.py`](#-analysispy-)
+  * [Other Notes](#other-notes)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## What is this ?
 Utilizing FaceNet pre-train model, we try to solve the facialrecogintion
@@ -50,8 +69,13 @@ Dataset
 
 To achieve this, the publicly available CelebA dataset is used.
 
-![](https://i.imgur.com/chd93DI.jpg)
 
+<p align="center">
+    <img
+    width=""
+    height="500"
+    src="https://i.imgur.com/chd93DI.jpg">
+</p>
 
 
 Over 253 different people was used.
@@ -102,7 +126,12 @@ brightness, and adding noise. This helped increase the amount
 of training data and also helped the models to better recognize
 faces under various different conditions
 
-![](https://i.imgur.com/BmixROM.png)
+<p align="center">
+    <img
+    width=""
+    height="500"
+    src="https://i.imgur.com/BmixROM.png">
+</p>
 
 Executable Files: `augmentation.py` This file contains code for image augmentation.
 
@@ -119,9 +148,11 @@ face in each image could be cropped and then resized to 160
 by 160 pixels.
 
 <p align="center">
-    <img  src="https://i.imgur.com/mcHtn5R.png">
+    <img
+    width=""
+    height=""
+    src="https://i.imgur.com/mcHtn5R.png">
 </p>
-
 
 FaceNet
 ---
@@ -149,7 +180,14 @@ were from the results of image augmentation. This shows that
 the image augmentation process used could be improved in the
 future. The following is the error distribution.
 
-![](https://i.imgur.com/oAQZ2Cw.png)
+
+
+<p align="center">
+    <img
+    width=""
+    height="300"
+    src="https://i.imgur.com/oAQZ2Cw.png">
+</p>
 
 To understand more about face embeddings, we decided to
 find the centroid of each label. This was achieved by
@@ -158,13 +196,27 @@ center. This provides the opportunity to study which faces are
 most similar, which are the most different by measuring the
 distances from one to another.
 
-![](https://i.imgur.com/A0ttsI1.png)
+<p align="center">
+    <img
+    width=""
+    height="300"
+    src="https://i.imgur.com/A0ttsI1.png">
+</p>
+
 
 According to the FaceNet model, these were the 2 most
 similar people in our data set, with a distance of 5.22884 from
 each other. The resemblance is notable by eye.
 
-![](https://i.imgur.com/xSb21od.png)
+
+<p align="center">
+    <img
+    width=""
+    height="300"
+    src="https://i.imgur.com/xSb21od.png">
+</p>
+
+
 
 These were the 2 most different people, with a distance of
 around 15. We might expect that these people would have
@@ -175,7 +227,13 @@ factors.
 A dimensional reduction technique called tsne was employed
 to visualize a sample of 100 labels from the training set:
 
-![](https://i.imgur.com/tC3Cq5N.png)
+
+<p align="center">
+    <img
+    width=""
+    height="300"
+    src="https://i.imgur.com/tC3Cq5N.png">
+</p>
 
 It is clear that some clusters have formed, indicating that
 different boundaries can be drawn for classification.
@@ -258,7 +316,15 @@ in 2.32 seconds.
 The graph of accuracy on the eval dataset for each threshold
 between 1 and 20 is below
 
-![](https://i.imgur.com/i7lydWK.png)
+
+<p align="center">
+    <img
+    width=""
+    height="300"
+    src="https://i.imgur.com/i7lydWK.png">
+</p>
+
+
 
 Stacked SVM
 ---
@@ -273,8 +339,13 @@ role in this method, a second SVM was introduced to process
 the output probability distribution of the first SVM. The
 overall system structure is shown below:
 
+<p align="center">
+    <img
+    width=""
+    height="600"
+    src="https://i.imgur.com/clY2pnn.png">
+</p>
 
-![](https://i.imgur.com/clY2pnn.png)
 
 The first model, SVM A, was trained to classify examples.
 The second model, SVM B, was trained to study the
@@ -284,7 +355,13 @@ its answer is yes, the example is concluded to be unknown; if
 not, it will be pushed back to model A for class determination.
 
 
-![](https://i.imgur.com/9qPi9QN.png)
+<p align="center">
+    <img
+    width=""
+    height="300"
+    src="https://i.imgur.com/9qPi9QN.png">
+</p>
+
 
 
 The above graph shows that the hypothesis is true. For the
