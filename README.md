@@ -24,13 +24,6 @@
   * [Brute Force Euclidean Distance](#brute-force-euclidean-distance)
   * [K-D Tree With Euclidean Distance](#k-d-tree-with-euclidean-distance)
   * [Stacked SVM](#stacked-svm)
-- [File Note](#results)
-  * [prepData.js](#-prepdatajs-)
-  * [few_shot_face_recogntion.py](#-few-shot-face-recogntionpy-)
-  * [svm_fewshot.py](#-svm-fewshotpy-)
-  * [analysis.py](#-analysispy-)
-  * [Other Notes](#other-notes)
-
 
 
 
