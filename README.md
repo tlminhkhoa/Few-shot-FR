@@ -11,27 +11,27 @@
 ![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
 ![chat](https://img.shields.io/discord/:serverId.svg) -->
 
-<!-- ## Table of Contents -->
+## Table of Contents
 
-- [Few Shot Facial Recognition](#few-shot-facial-recognition-----https---iimgurcom-jrysvv4png-)
-  * [What is this ?](#what-is-this--)
+- [Few Shot Facial Recognition](#few-shot-facial-recognition-)
+  * [What is this ?](#what-is-this-)
   * [Dataset](#dataset)
   * [Image Augmentation](#image-augmentation)
-  * [Multi-Task Cascaded Convolutional Networks (MTCNN)](#multi-task-cascaded-convolutional-networks--mtcnn-)
+  * [Multi-Task Cascaded Convolutional Networks (MTCNN)](#multi-task-cascaded-convolutional-networks-mtcnn)
   * [FaceNet](#facenet)
-  * [RESULTS](#results)
+- [Results](#results)
   * [Exploratory Data Analysis](#exploratory-data-analysis)
   * [Brute Force Euclidean Distance](#brute-force-euclidean-distance)
   * [K-D Tree With Euclidean Distance](#k-d-tree-with-euclidean-distance)
   * [Stacked SVM](#stacked-svm)
-          + [tags: `Templates` `Documentation`](#tags---templates---documentation-)
-  * [`prepData.js`](#-prepdatajs-)
-  * [`few_shot_face_recogntion.py`](#-few-shot-face-recogntionpy-)
-  * [`svm_fewshot.py`](#-svm-fewshotpy-)
-  * [`analysis.py`](#-analysispy-)
+- [File Note](#results)
+  * [prepData.js](#-prepdatajs-)
+  * [few_shot_face_recogntion.py](#-few-shot-face-recogntionpy-)
+  * [svm_fewshot.py](#-svm-fewshotpy-)
+  * [analysis.py](#-analysispy-)
   * [Other Notes](#other-notes)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 ## What is this ?
@@ -367,8 +367,6 @@ not, it will be pushed back to model A for class determination.
 The above graph shows that the hypothesis is true. For the
 unseen labels, there is a high density of around 5.3, whereas
 the remaining samples are spread out in the lower unit.
-
-###### tags: `Templates` `Documentation`
 
 
 
